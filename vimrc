@@ -18,12 +18,17 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-bundler'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+
+" Ruby / Rails plugins
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-bundler'
+
+" Golang
+Plugin 'fatih/vim-go'
 
 " All Plugins must be required before the following line
 call vundle#end()         " required
@@ -65,12 +70,29 @@ set expandtab		      " Convert <tab> to spaces (2 or 4)
 set tabstop=2		      " Two spaces per tab as default
 set shiftwidth=2	    "     then override with per filetype
 set softtabstop=2	    "     specific settings via autocmd	
-set number            " Show line numbers
+set relativenumber    " Show line numbers
+set ruler             " Always show current position
+set ignorecase        " Ignore case when searching
+
+" Return to the last edit position when opening files
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+" Remember info about open buffers on close
+set viminfo^=%
 
 " Set modeline to 1 to allow rcfiles to be recognized as vim files
 set modelines=1
 
+" Files, backups, and undo
+"-------------------------
+set nobackup " Turn backup off
+set nowb
+set noswapfile
+
 " Leader commands
+"----------------
 map <leader>i mmgg=G`m<CR>
 map <leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
 
