@@ -1,0 +1,15 @@
+#
+# Personal aliases
+#
+alias b="bundle"
+alias bi="bundle install"
+alias bu="bundle update"
+alias fs="foreman start -f Procfile.dev" # BlockScore
+alias fucking="sudo"
+alias git="hub"
+alias rc="rails console"
+alias rdm="rake db:migrate"
+alias rdr="rake db:rollback"
+alias rollback="rake db:rollback"
+alias rs="rails server"
+alias rt="rake test"
