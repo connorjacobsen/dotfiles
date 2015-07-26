@@ -21,3 +21,6 @@ for file in "${files[@]}"
 do
   create_symlink $file
 done
+
+# Install Vundle plugins
+vim +PluginInstall +qall
