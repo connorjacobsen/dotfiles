@@ -37,7 +37,7 @@ filetype plugin indent on " required
 let mapleader = "\<Space>"
 
 " Split edit vimrc file
-nmap <leader>vr :sp $MYVIMRC<CR>
+nmap <leader>vs :sp $MYVIMRC<CR>
 " Reload vimrc file
 nmap <leader>so :source $MYVIMRC<CR>
 
@@ -69,5 +69,9 @@ set number            " Show line numbers
 
 " Set modeline to 1 to allow rcfiles to be recognized as vim files
 set modelines=1
+
+" Leader commands
+map <leader>i mmgg=G`m<CR>
+map <leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
 
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop
