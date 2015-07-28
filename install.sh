@@ -15,7 +15,7 @@ function create_symlink {
 }
 
 # Files to symlink
-files=( zshrc vimrc vim rspec gitconfig pryrc pry agignore oh-my-zsh)
+files=( zshrc vimrc vim rspec gitconfig pryrc pry agignore oh-my-zsh zshenv)
 
 for file in "${files[@]}"
 do

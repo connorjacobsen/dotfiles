@@ -26,6 +26,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
+Plugin 'thoughtbot/vim-rspec'
 
 " Golang
 Plugin 'fatih/vim-go'
@@ -60,6 +61,7 @@ let g:ctrlp_use_caching = 0
 " General configurations
 "-----------------------
 
+set shell=/bin/sh     " Ensure vim always runs from a shell
 set nocompatible	    " No concerned with vi compatibility
 set hidden		        " Allow buffer change w/o saving
 set autoread		      " Load file from disk
@@ -74,14 +76,6 @@ set relativenumber    " Show line numbers
 set ruler             " Always show current position
 set ignorecase        " Ignore case when searching
 
-" Return to the last edit position when opening files
-autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-" Remember info about open buffers on close
-set viminfo^=%
-
 " Set modeline to 1 to allow rcfiles to be recognized as vim files
 set modelines=1
 
@@ -93,6 +87,10 @@ set noswapfile
 
 " Leader commands
 "----------------
+nmap <leader>bi :!bundle install<CR>
+nmap <leader>t :call RunCurrentSpecFile()<CR>
+nmap <leader>v :!vundle<CR>
+
 map <leader>i mmgg=G`m<CR>
 map <leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
 
