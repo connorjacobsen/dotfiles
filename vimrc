@@ -31,6 +31,9 @@ Plugin 'thoughtbot/vim-rspec'
 " Golang
 Plugin 'fatih/vim-go'
 
+" Scala
+Plugin 'derekwyatt/vim-scala'
+
 " All Plugins must be required before the following line
 call vundle#end()         " required
 filetype plugin indent on " required
