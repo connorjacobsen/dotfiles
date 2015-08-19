@@ -37,3 +37,9 @@ if defined?(PryByebug)
     _pry_.run_command Pry.history.to_a.last
   end
 end
+
+module Kernel
+  def ms(obj)
+    obj.methods - Object.methods
+  end
+end
