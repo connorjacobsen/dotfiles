@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/connor/.oh-my-zsh
+export ZSH=/Users/$USER/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -37,7 +37,7 @@ export PATH="$PATH:/Users/connor/.rvm/gems/ruby-2.2.2/bin:/Users/connor/.rvm/gem
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Configure GOPATH
-export GOPATH=/Users/connor/Developer/go
+export GOPATH=/Users/$USER/Developer/go
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +56,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Load other files
 dotfiles=$HOME/Developer/dotfiles
-source $dotfiles/zsh/aliases
+# source $dotfiles/zsh/aliases
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+eval "$(rbenv init -)"
