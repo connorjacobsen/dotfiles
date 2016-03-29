@@ -72,12 +72,13 @@ set lazyredraw		    " Don't update while executing macros
 set history=1000	    " Remember last 1000 commands
 set scrolloff=5		    " Keep at least 4 lines below cursor
 set expandtab		      " Convert <tab> to spaces (2 or 4)
+set number            " Line numbers
 set tabstop=2		      " Two spaces per tab as default
 set shiftwidth=2	    "     then override with per filetype
 set softtabstop=2	    "     specific settings via autocmd	
-set relativenumber    " Show line numbers
 set ruler             " Always show current position
 set ignorecase        " Ignore case when searching
+set cursorline
 
 " Set modeline to 1 to allow rcfiles to be recognized as vim files
 set modelines=1
