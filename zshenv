@@ -14,8 +14,11 @@ alias gcm="git commit -m"
 alias gfp="git push -f origin"
 alias git="hub"
 alias gpm="git push -u origin master"
+alias ni="npm install"
 alias p="git push origin"
 alias pu="git push -u origin"
+alias pull="git pull"
+alias push="git push"
 alias rc="rails console"
 alias rdm="rake db:migrate"
 alias rdr="rake db:rollback"
@@ -25,3 +28,9 @@ alias rt="rake test"
 alias v="vim +PluginInstall +qall"
 alias vimrc="vim ~/.vimrc"
 alias vundle="vim +PluginInstall +qall"
+
+#
+# Opendoor aliases
+#
+alias deploy="bin/deploy"
+alias pc="bin/checkin/pre-commit"

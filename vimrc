@@ -21,8 +21,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'vim-airline/vim-airline'
+Plugin 'rking/ag.vim'
 
 " Ruby / Rails plugins
+Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
@@ -34,9 +37,15 @@ Plugin 'fatih/vim-go'
 " Scala
 Plugin 'derekwyatt/vim-scala'
 
+" Elm
+Plugin 'elmcast/elm-vim'
+
 " All Plugins must be required before the following line
 call vundle#end()         " required
 filetype plugin indent on " required
+
+" Search
+let g:ag_highlight=1
 
 "=================================================================
 " Configurations
@@ -78,7 +87,8 @@ set shiftwidth=2	    "     then override with per filetype
 set softtabstop=2	    "     specific settings via autocmd	
 set ruler             " Always show current position
 set ignorecase        " Ignore case when searching
-set cursorline
+set cursorline        " Underline the current row
+set cursorcolumn      " Hightlight the current column
 
 " Set modeline to 1 to allow rcfiles to be recognized as vim files
 set modelines=1
@@ -88,6 +98,10 @@ set modelines=1
 set nobackup " Turn backup off
 set nowb
 set noswapfile
+
+" vim-rspec customizations
+"-------------------------
+let g:rspec_command = "!bin/rspec {spec}"
 
 " Leader commands
 "----------------
