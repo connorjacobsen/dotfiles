@@ -40,6 +40,9 @@ Plugin 'derekwyatt/vim-scala'
 " Elm
 Plugin 'elmcast/elm-vim'
 
+" Rust
+Plugin 'rust-lang/rust.vim'
+
 " All Plugins must be required before the following line
 call vundle#end()         " required
 filetype plugin indent on " required
@@ -102,6 +105,10 @@ set noswapfile
 " vim-rspec customizations
 "-------------------------
 let g:rspec_command = "!bin/rspec {spec}"
+
+" rust.vim customizations
+"------------------------
+let g:rustfmt_autosave = 1
 
 " Leader commands
 "----------------

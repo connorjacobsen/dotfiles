@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/connorjacobsen/Developer/web/app/views'
-let g:netrw_dirhist_2='/Users/connorjacobsen/Developer/web/app/views/templates'
-let g:netrw_dirhist_3='/Users/connorjacobsen/Developer/web/app/views/templates/admin'
-let g:netrw_dirhist_4='/Users/connorjacobsen/Developer/web/app/views/templates/admin/properties'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/connor/Developer/ruby/machina'
+let g:netrw_dirhist_2='/Users/connor/Developer/ruby/machina/lib'
+let g:netrw_dirhist_3='/Users/connor/Developer/ruby/machina'
+let g:netrw_dirhist_4='/Users/connor/Developer/c/luna'
+let g:netrw_dirhist_5='/Users/connor/Developer/iris/iris/test'
