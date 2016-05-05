@@ -19,10 +19,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'vim-airline/vim-airline'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'marcopaganini/termschool-vim-theme'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-scripts/obsidian2.vim'
 
 " Ruby / Rails plugins
 Plugin 'slim-template/vim-slim'
@@ -39,6 +43,9 @@ Plugin 'derekwyatt/vim-scala'
 
 " Elm
 Plugin 'elmcast/elm-vim'
+
+" LESS
+Plugin 'groenewege/vim-less'
 
 " All Plugins must be required before the following line
 call vundle#end()         " required
@@ -58,10 +65,15 @@ let mapleader = "\<Space>"
 nmap <leader>vs :sp $MYVIMRC<CR>
 " Reload vimrc file
 nmap <leader>so :source $MYVIMRC<CR>
+" Open NERDTree view
+nmap <leader>n :NERDTreeToggle<CR>
 
 " Treat wrapped lines as separate lines
 nmap k gk
 nmap j gj
+
+" Colorscheme
+colorscheme termschool
 
 " Syntax highlighting
 syntax on
@@ -89,6 +101,7 @@ set ruler             " Always show current position
 set ignorecase        " Ignore case when searching
 set cursorline        " Underline the current row
 set cursorcolumn      " Hightlight the current column
+set colorcolumn=80    " line at 80
 
 " Set modeline to 1 to allow rcfiles to be recognized as vim files
 set modelines=1
@@ -105,11 +118,19 @@ let g:rspec_command = "!bin/rspec {spec}"
 
 " Leader commands
 "----------------
+nmap <leader>a :call RunAllSpecs()<CR>
 nmap <leader>bi :!bundle install<CR>
+nmap <leader>l :call RunLastSpec()<CR>
+nmap <leader>s :call RunNearestSpec()<CR>
 nmap <leader>t :call RunCurrentSpecFile()<CR>
 nmap <leader>v :!vundle<CR>
 
 map <leader>i mmgg=G`m<CR>
 map <leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
 
+" Uncomment to automatically open up NERDTree if no files specified on startup
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Set indentation preferences for Ruby files
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop
