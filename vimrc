@@ -27,6 +27,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/obsidian2.vim'
+Plugin 'airblade/vim-gitgutter'
 
 " Ruby / Rails plugins
 Plugin 'slim-template/vim-slim'
@@ -44,11 +45,24 @@ Plugin 'derekwyatt/vim-scala'
 " Elm
 Plugin 'elmcast/elm-vim'
 
+" Elixir
+Plugin 'elixir-lang/vim-elixir'
+
 " LESS
 Plugin 'groenewege/vim-less'
 
 " Rust
 Plugin 'rust-lang/rust.vim'
+
+" Python
+Plugin 'python-mode/python-mode'
+
+" OCaml
+Plugin 'rgrinberg/vim-ocaml'
+
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " All Plugins must be required before the following line
 call vundle#end()         " required
@@ -85,6 +99,9 @@ syntax on
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
+" Show dotfiles in NERDTree
+let NERDTreeShowHidden=1
+
 " General configurations
 "-----------------------
 
@@ -105,6 +122,7 @@ set ignorecase        " Ignore case when searching
 set cursorline        " Underline the current row
 set cursorcolumn      " Hightlight the current column
 set colorcolumn=80    " line at 80
+set nofoldenable      " disable folding
 
 " Set modeline to 1 to allow rcfiles to be recognized as vim files
 set modelines=1
@@ -121,7 +139,7 @@ let g:rspec_command = "!bin/rspec {spec}"
 
 " rust.vim customizations
 "------------------------
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
 
 " Leader commands
 "----------------
